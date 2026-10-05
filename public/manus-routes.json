@@ -1,0 +1,8 @@
+{
+  "routes": [
+    { "path": "/", "title": "RewardHarbor | Popular USA Reward Offers" },
+    { "path": "/#offers", "title": "RewardHarbor | Browse All Offers" },
+    { "path": "/#how-it-works", "title": "RewardHarbor | How It Works" },
+    { "path": "/#faq", "title": "RewardHarbor | FAQ" }
+  ]
+}

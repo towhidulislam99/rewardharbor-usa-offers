@@ -1,0 +1,22 @@
+# RewardHarbor Outcomes
+
+- [ ] Homepage shows exactly 32 curated popular USA-compatible CPA offer cards before the Browse All Offers CTA, excluding UK-only, unclear, or inactive-looking offers.
+- [ ] Every offer card has an image-style visual at the top and a colored background information panel below containing category badge, title, concise copy, reward/eligibility context, terms note, and a clear outbound CTA.
+- [ ] Desktop uses a four-column card grid, tablet uses three columns, and mobile uses an easy-to-tap responsive layout with rounded cards, subtle shadows, and restrained hover behavior.
+- [ ] Browse All Offers exposes the full directory with category browsing and filters for gift cards, cash rewards, surveys, food, shopping, samples, and promotional offers.
+- [ ] Card CTA links preserve the supplied CPA tracking destinations, use sponsored/nofollow/noopener attributes, and make the advertiser/third-party relationship clear before the visitor continues.
+- [ ] Adsterra-ready responsive banner slots appear with an Advertisement label and remain visually distinct from offer cards and offer CTAs.
+- [ ] Homepage includes Popular Offers, How It Works, FAQ, Offer Disclosure/Official Rules, Terms, Privacy, and Contact content/sections.
+- [ ] Copy and interaction avoid fake urgency, fake winner notifications, guaranteed prize claims, fake social proof, and misleading language.
+- [ ] The site is mobile-first, fast-loading, keyboard-friendly, readable, and includes SEO-ready semantic metadata and the public route manifest.
+- [ ] The offer data contract leaves room for future click/conversion metrics to reorder Popular Offers based on real performance.
+- [ ] A compact five-image featured carousel sits directly below the hero and before the existing banner, with automatic timed rotation, arrow/dot controls, pause-on-hover/focus behavior, and reduced-motion support.
+- [ ] Clicking the RewardHarbor brand after opening Browse All Offers hides the full directory, resets filters, and returns to the home state.
+- [ ] The landing page includes honest trust badges for secure browsing, USA focus, and independent third-party directory status without claiming unsupported certifications.
+- [ ] The footer area includes professional, responsive Privacy Policy, Terms of Use, and Advertiser Disclosure summary panels plus clear navigation links.
+- [ ] Initial HTML includes USA-focused SEO title, description, keyword cluster, robots guidance, Open Graph/Twitter metadata, crawler-visible body copy, and WebSite structured data without a guessed permanent canonical hostname.
+- [ ] Mobile performance uses non-blocking font loading, below-the-fold content visibility, and pointer-only hover effects without changing the offer-card content or CTA behavior.
+- [ ] GA4 and Meta Pixel loaders are present in the site code, load asynchronously only when real IDs replace the empty configuration slots, and track page view plus offer-click/browse-all events without sending placeholder data.
+- [ ] Offer cards and the featured carousel use one stable visitor-level CTA experiment assignment: 50% “Get This Offer”, 25% “Check Eligibility”, and 25% “View Offer Details”, with the assigned variant included in offer-click tracking.
+- [ ] Desktop visitors can receive one dismissible exit-intent modal per session, while mobile visitors can receive one dismissible bottom sheet after approximately 62% scroll; neither uses auto-redirects, fake urgency, or hidden close controls.
+- [ ] A stale `#offers` hash never opens the full directory on initial load; All Offers opens only through an intentional browse action or intent CTA.
