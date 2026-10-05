@@ -77,8 +77,14 @@ button { cursor: pointer; }
 .float-spark { position: absolute; color: var(--gold); font-size: 19px; }
 .float-one { top: 45px; right: 20px; }.float-two { bottom: 65px; left: 5px; color: var(--blue); }.float-three { top: 90px; left: 48px; color: var(--coral); }
 
-.ad-slot { max-width: 1160px; min-height: 88px; margin: 0 auto 52px; padding: 13px 20px; border: 1px dashed #cbd4e7; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 13px; background: linear-gradient(90deg, rgba(247,249,253,.9), rgba(239,244,255,.85)); color: #7e8ba5; }
-.ad-label { color: var(--navy); text-transform: uppercase; letter-spacing: .14em; font-size: 9px; font-weight: 800; }.ad-placeholder { font-size: 12px; }.ad-size { padding: 5px 8px; border-radius: 6px; background: white; color: #91a0bd; font-size: 9px; font-weight: 700; }
+.ad-slot { max-width: 1160px; min-height: 108px; margin: 0 auto 52px; padding: 8px 12px; border: 1px solid #e7ebf3; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: #fff; color: #7e8ba5; overflow-x: auto; }
+.ad-label { color: #7e8ba5; text-transform: uppercase; letter-spacing: .14em; font-size: 8px; font-weight: 800; }
+.ad-content { display: grid; flex: 0 0 auto; place-items: center; overflow: hidden; }
+.ad-content script { display: none; }
+.ad-status { color: #7e8ba5; font-size: 10px; }
+.ad-slot-top-banner .ad-content { width: 728px; height: 90px; }
+.ad-slot-mid-grid, .ad-slot-directory-banner { width: fit-content; max-width: 100%; min-height: 0; padding: 10px; }
+.ad-slot-mid-grid .ad-content, .ad-slot-directory-banner .ad-content { width: 300px; height: 250px; }
 .section-block { max-width: 1280px; margin: auto; padding: 72px 34px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
 .section-heading h2, .how-heading h2, .trust-panel h2 { margin: 14px 0 0; color: var(--navy); font: 800 40px/1.1 'Plus Jakarta Sans', sans-serif; letter-spacing: -.07em; }
@@ -246,7 +252,7 @@ button { cursor: pointer; }
 }
 
 .grid-ad-slot { grid-column: 1 / -1; min-width: 0; }
-.grid-ad-slot .ad-slot { max-width: none; margin: 7px 0 7px; }
+.grid-ad-slot .ad-slot { max-width: none; margin: 7px auto; }
 @media (max-width: 760px) { .grid-ad-slot .ad-slot { min-height: 68px; } }
 
 /* Trust signals and legal information panels */

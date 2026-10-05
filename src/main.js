@@ -266,11 +266,11 @@ const cardVisual = (item) => `
     `}
   </div>`;
 
-const adSlot = (label = 'Responsive banner placement') => `
-  <div class="ad-slot" data-ad-slot="adsterra-banner" aria-label="Advertisement">
+const adSlot = (placement, label, key, width, height) => `
+  <div class="ad-slot ad-slot-${placement}" data-ad-slot="${placement}" data-ad-provider="adsterra" data-ad-key="${key}" data-ad-width="${width}" data-ad-height="${height}" aria-label="${esc(label)}">
     <span class="ad-label">Advertisement</span>
-    <span class="ad-placeholder">${label}</span>
-    <span class="ad-size">Adsterra-ready</span>
+    <div class="ad-content" aria-label="${esc(label)}"></div>
+    <span class="ad-status" role="status" aria-live="polite"></span>
   </div>`;
 
 const offerCard = (item) => {
@@ -351,7 +351,7 @@ app.innerHTML = `
         <div class="spotlight-viewport" id="spotlight-viewport"><div class="spotlight-track" id="spotlight-track"></div></div>
       </section>
 
-      ${adSlot('Top banner placement · 728×90 / responsive')}
+      ${adSlot('top-banner', 'Adsterra top banner · 728×90', '3f03bff4ac94425c640bbf122d14569f', 728, 90)}
 
       <section class="section-block popular-section" id="popular" aria-labelledby="popular-title">
         <div class="section-heading"><div><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> Curated for a quicker browse</div><h2 id="popular-title">Popular offers</h2></div><span class="section-count">32 featured</span></div>
@@ -364,7 +364,7 @@ app.innerHTML = `
         <div class="section-heading"><div><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> Full offer directory</div><h2 id="offers-title">Browse all offers</h2></div><span class="section-count" id="all-count">0 offers</span></div>
         <div class="directory-controls"><label class="search-box"><span aria-hidden="true">⌕</span><input id="offer-search" type="search" placeholder="Search offers" aria-label="Search offers" /></label><label class="select-box"><span>Category</span><select id="category-filter" aria-label="Filter by category"></select></label><label class="select-box"><span>Sort</span><select id="sort-filter" aria-label="Sort offers"><option value="popular">Featured order</option><option value="az">A–Z</option><option value="value">Reward value</option></select></label></div>
         <div class="offer-grid all-grid" id="all-grid"></div>
-        <div class="all-ad-wrap">${adSlot('Directory banner placement · responsive')}</div>
+        <div class="all-ad-wrap">${adSlot('directory-banner', 'Adsterra directory banner · 300×250', '2c9d676def04f1732337ae2be983cb8a', 300, 250)}</div>
       </section>
 
       <section class="how-section" id="how-it-works" aria-labelledby="how-title">
@@ -418,10 +418,40 @@ const scrollSheet = document.querySelector('#scroll-sheet');
 const mobileStickyCta = document.querySelector('#mobile-sticky-cta');
 let carouselIndex = 0;
 let carouselTimer;
+let adLoadingQueue = Promise.resolve();
+
+const loadAdSlots = (root = document) => {
+  const slots = [...root.querySelectorAll('.ad-slot[data-ad-provider="adsterra"]:not([data-ad-state])')]
+    .filter((slot) => !slot.closest('[hidden]'));
+  for (const slot of slots) {
+    slot.dataset.adState = 'loading';
+    adLoadingQueue = adLoadingQueue.then(() => new Promise((resolve) => {
+      const key = slot.dataset.adKey;
+      const width = Number(slot.dataset.adWidth);
+      const height = Number(slot.dataset.adHeight);
+      const script = document.createElement('script');
+      const status = slot.querySelector('.ad-status');
+      window.atOptions = { key, format: 'iframe', height, width, params: {} };
+      script.async = false;
+      script.src = `https://eatingjudgelos.com/${encodeURIComponent(key)}/invoke.js`;
+      script.onload = () => {
+        slot.dataset.adState = 'loaded';
+        resolve();
+      };
+      script.onerror = () => {
+        slot.dataset.adState = 'error';
+        status.textContent = 'Advertisement could not be loaded. Please check back later.';
+        resolve();
+      };
+      slot.querySelector('.ad-content').append(script);
+    }));
+  }
+};
 
 const showAllOffers = () => {
   state.allVisible = true;
   allSection.hidden = false;
+  loadAdSlots(allSection);
   allSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   if (window.location.hash !== '#offers') window.history.replaceState(null, '', '#offers');
   if (mobileStickyCta) mobileStickyCta.hidden = true;
@@ -443,7 +473,7 @@ const maybeTriggerDelayedOfferPrompt = () => {
 const renderPopular = () => {
   const firstBatch = popularOffers.slice(0, 16).map(offerCard).join('');
   const secondBatch = popularOffers.slice(16).map(offerCard).join('');
-  popularGrid.innerHTML = `${firstBatch}<div class="grid-ad-slot">${adSlot('Mid-grid banner placement · 300×250 / responsive')}</div>${secondBatch}`;
+  popularGrid.innerHTML = `${firstBatch}<div class="grid-ad-slot">${adSlot('mid-grid', 'Adsterra mid-grid banner · 300×250', '2c9d676def04f1732337ae2be983cb8a', 300, 250)}</div>${secondBatch}`;
 };
 const renderAll = () => {
   const filtered = sortedOffers(filterOffers(allOffers));
@@ -482,6 +512,7 @@ Object.entries(categoryLabels).forEach(([value, label]) => {
 renderPopular();
 renderAll();
 renderCarousel();
+loadAdSlots(document.querySelector('main'));
 track('cta_experiment_assignment', { cta_variant: ctaVariant });
 
 document.querySelectorAll('.brand[href="#top"]').forEach((brandLink) => brandLink.addEventListener('click', (event) => { track('home_navigation'); resetToHome(event); }));
