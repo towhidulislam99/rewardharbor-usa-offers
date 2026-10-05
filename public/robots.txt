@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rewardharbor-usa-offers.netlify.app/sitemap.xml
