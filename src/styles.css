@@ -94,7 +94,8 @@ button { cursor: pointer; }
 .offer-card { min-width: 0; overflow: hidden; border: 1px solid rgba(224, 230, 240, .95); border-radius: 18px; background: white; box-shadow: 0 6px 18px rgba(11, 21, 51, .035); transition: transform .22s ease, box-shadow .22s ease; }
 .offer-card:hover { transform: translateY(-5px); box-shadow: var(--soft-shadow); }
 .offer-visual { height: 170px; position: relative; overflow: hidden; display: grid; place-items: center; isolation: isolate; }
-.offer-visual-image { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+.offer-visual.has-image { background: #17213a; }
+.offer-visual-image { width: 100%; height: 100%; position: absolute; z-index: 1; inset: 0; object-fit: cover; }
 .offer-visual.has-image::before, .offer-visual.has-image::after { display: none; }
 .offer-visual::before, .offer-visual::after { content: ''; position: absolute; border-radius: 50%; opacity: .5; }
 .offer-visual::before { width: 210px; height: 210px; top: -110px; right: -45px; background: rgba(255,255,255,.16); }

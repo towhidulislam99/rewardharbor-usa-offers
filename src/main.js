@@ -6,15 +6,86 @@ const offerImages = {
   'Unclaimed Money Search': 'Unclaimed Money Search.webp',
   'Unclaimed Money': 'Unclaimed Money.webp',
   'Amazon $1,000': 'Get Amazon $1000 .webp',
+  'Amazon $1,000 Gift Card': 'Get Amazon $1000 .webp',
+  'Amazon Gift Card $1,000': 'Get Amazon $1000 .webp',
   'Rewards US — Cash $750': 'Rewards US - Cash $750.webp',
   '$1,000 Cash Deposit': '$1000 Cash Deposit.webp',
   'Costco $100': 'Costco $100.webp',
+  'Costco Gift Card $100': 'Costco $100.webp',
   'Auto Money Decoded': 'Auto Money Decoded.webp',
   '$1,000 Cash App': '$1K Cashapp.webp',
+  'Cash App $850': 'ad_22599_6abc68b919c45-ezgif.com-png-to-webp-converter.webp',
   'Rewards Locker — Cash App': 'Rewards Locker- CashApp.webp',
   'McDonald’s $250 Gift Card': '$250 McDonald Gift Card.webp',
   'McDonald’s $250 Rewards': '$250 McDonald Rewards.webp',
   'American Prizes — Amazon $1,000': 'American Prizes -Get Amazon $1,000.webp',
+  'Walmart Rewards $1,000': 'Firefly_gpt-image_CreateapremiummodernpromotionaladvertisementforaU.S.-focusedcampaigntitled332522-ezgif.com-png-to-webp-converter.webp',
+  'Getn Goods — Walmart Rewards $1,000': 'ad_23763_6ac132f827254-ezgif.com-png-to-webp-converter.webp',
+  'Walmart $500 Gift Card': 'ad_18890_6ab12df5cf84f-ezgif.com-png-to-webp-converter.webp',
+  'Survey Junkie': 'ad_14071_6aa03170291c8-ezgif.com-png-to-webp-converter.webp',
+  'McDonald’s vs BK': 'ad_19622_6ab3878592d61-ezgif.com-png-to-webp-converter.webp',
+  'CTConnect — PayPal $100': 'ad_20780_6ab6a15740858-ezgif.com-png-to-webp-converter.webp',
+  'PerkPantry Mystery Box CashApp $1,000': 'ad_21441_6ab8c111750cd-ezgif.com-png-to-webp-converter.webp',
+  'Netflix $100': 'ad_22027_6aba83c9960be-ezgif.com-png-to-webp-converter.webp',
+  'eBike $1,000': 'ad_22743_6abcf3c5aeb311-ezgif.com-png-to-webp-converter.webp',
+  'Food Giveaway $200': 'ad_23009_6abe171cf28aa-ezgif.com-png-to-webp-converter.webp',
+  'Product Reviewer — Amazon Bonus $750': 'ad_23105_6abe738771430-ezgif.com-png-to-webp-converter.webp',
+  'Visa Gift Card $1,000': 'ad_19231_6ab26d5588d27-ezgif.com-png-to-webp-converter.webp',
+  'PrizeZappy — Chance to Win $50K': 'ad_23056_6abe4624b0474-ezgif.com-png-to-webp-converter.webp',
+  'CTConnect — Chick-fil-A $100': 'ad_15245_6aa4f23c4a7701-ezgif.com-png-to-webp-converter.webp',
+  'Free Samples — Mystery Box': 'ad_24067_6ac24360c25a31-ezgif.com-png-to-webp-converter.webp',
+  'Family Dollar $500': 'ad_24123_6ac26dce57d8f-ezgif.com-png-to-webp-converter.webp',
+  'Sephora $750 Shopping': 'ad_16890_6aaa568ad859b-ezgif.com-png-to-webp-converter.webp',
+  'Outback Gift Card $1,000': 'ad_23949_6ac1e5b947005-ezgif.com-png-to-webp-converter.webp',
+  'Rewards US — Skims $750 Shopping': 'ad_24261_6ac303fbd400d-ezgif.com-png-to-webp-converter.webp',
+  'American Eagle $100': 'ad_24107_6ac265ae624e3-ezgif.com-png-to-webp-converter.webp',
+  'Coca-Cola Mini Fridge': 'ad_24102_6ac2625a34f4b-ezgif.com-png-to-webp-converter.webp',
+  'Nike Rewards $1,000': 'ad_24117_6ac26a6a761ae-ezgif.com-png-to-webp-converter.webp',
+  'Product Reviewer — iPhone 15 Pro Max Bonus $750': 'ad_24391_6ac377518eacf-ezgif.com-png-to-webp-converter.webp',
+  'Shein $100': 'ad_24397_6ac37eee4b80d-ezgif.com-png-to-webp-converter.webp',
+  'PerkPantry CashApp $1,000': 'ad_24442_6ac3a33507b6e-ezgif.com-png-to-webp-converter.webp',
+  'RewardZinga — Cash App $1,000': 'ad_23764_6ac1333dbc3cb-ezgif.com-png-to-webp-converter.webp',
+  'Burger King Rewards $1,000': 'ad_24496_6ac3cbcfebc0c-ezgif.com-png-to-webp-converter.webp',
+  'Apple Watch 8': 'ad_24525_6ac3dfb7d5d62-ezgif.com-png-to-webp-converter.webp',
+  'Texas Roadhouse Rewards $1,000': 'ad_24703_6ac4968358732-ezgif.com-png-to-webp-converter.webp',
+  'Royal Cruise $100': 'ad_24779_6ac4e81680360-ezgif.com-png-to-webp-converter.webp',
+  'Rewards UK — Shein £750 Shopping': 'ad_23993_6ac1ff92e27dc-ezgif.com-png-to-webp-converter.webp',
+  'KFC Gift Card $1,000': 'ad_21955_6aba523a0e8ac-ezgif.com-png-to-webp-converter.webp',
+  'Sneakers Gift Card': 'ad_13974_6a9fd0dc8df04-ezgif.com-png-to-webp-converter.webp',
+  'Nike Gift Card $100': 'ad_13980_6a9fd8179c887-ezgif.com-png-to-webp-converter.webp',
+  'Google Play Gift Card $1,000': 'ad_14331_6aa1634b4f085-ezgif.com-png-to-webp-converter.webp',
+  'Tap Coin Rewards': 'ad_23329_6abf70d674852-ezgif.com-png-to-webp-converter.webp',
+  'Best Rewards Now': 'ad_23337_6abf7a0fdd29c-ezgif.com-png-to-webp-converter.webp',
+  'Samsung Galaxy S26 Ultra Giveaway': 'ad_23361_6abf9725999c1-ezgif.com-png-to-webp-converter.webp',
+  'Airport Jobs (US)': 'ad_23810_6ac15751332ad-ezgif.com-png-to-webp-converter.webp',
+  'Starbucks Gift Card $250': 'ad_23921_6ac1d478d9027-ezgif.com-png-to-webp-converter.webp',
+  'Digital Gift Card Giveaway $750': 'ad_24077_6ac24dc2affef-ezgif.com-png-to-webp-converter.webp',
+  'Jersey Mike’s Gift Card $100': 'ad_24632_6ac45834070c4-ezgif.com-png-to-webp-converter.webp',
+  'Free Gift Card $25': 'ad_24663_6ac47901897cb-ezgif.com-png-to-webp-converter.webp',
+  'Smartphone Giveaway': 'ad_24773_6ac4e54509a21-ezgif.com-png-to-webp-converter.webp',
+  'Walmart $1,000': 'Walmart $1,000.webp',
+  'Unemployment Resources': 'Unemployment Resources.webp',
+  'Daily Spinz Cash App': 'Adult_using_smartphone_for_rewards_2K_20261007142510-ezgif.com-png-to-webp-converter.webp',
+  'Cash App $750 Gift Card': 'image_8280148-ezgif.com-png-to-webp-converter.webp',
+  'Top Survey Spot': 'Consumer_using_smartphone_for_su_2K_20261007140129-ezgif.com-png-to-webp-converter.webp',
+  'Shein Gift Card $1,000': 'Createapremiummodernpromoti9511763LS-ezgif.com-png-to-webp-converter.webp',
+  'PerkPantry — McDonald’s $150': 'CreateapremiummodernpromotionaladvertisementforaU.S.-focusedcampaigntitled--PERKPANTRY-ezgif.com-png-to-webp-converter.webp',
+  'Super Samples': 'CreateapremiummodernpromotionalimageforaU.S.-focusedcampaigntitled--SUPERSAMPLES--.__-ezgif.com-png-to-webp-converter.webp',
+  'Holiday Relief': 'Family_enjoying_holiday_relief_c_2K_20261007140755-ezgif.com-png-to-webp-converter.webp',
+  'Chick-fil-A Rewards $750': 'Firefly_gpt-image_CreateapremiummodernpromotionaladvertisementforaU.S.-focusedcampaigntitled3325221-ezgif.com-png-to-webp-converter.webp',
+  'Gas Card $1,000': 'Firefly_gpt-image_CreateapremiummodernpromotionaladvertisementforaU.S.-focusedcampaigntitled3325222-ezgif.com-png-to-webp-converter.webp',
+  'CTConnect — Cash App $750': 'Firefly_gpt-image_CreateapremiummodernpromotionaladvertisementforaU.S.-focuseddigitalrewards173162-ezgif.com-png-to-webp-converter.webp',
+  'Surveys2Cash': 'Firefly_gpt-image_CreateapremiummodernpromotionaladvertisementforaU.S.-focusedsurveyandrewa173162-ezgif.com-png-to-webp-converter.webp',
+  'Aldi Gift Card $100': 'Grocery_rewards_campaign_promoti_2K_20261007134842-ezgif.com-png-to-webp-converter.webp',
+  'Walmart Rewards $750': 'image_8280106-ezgif.com-png-to-webp-converter.webp',
+  'Food Lion Rewards $1,000': 'image_8280218-ezgif.com-png-to-webp-converter.webp',
+  'Aldi Gift Card $750': 'image_8280252-ezgif.com-png-to-webp-converter.webp',
+  'Cash App $650': 'image_8280404-ezgif.com-png-to-webp-converter.webp',
+  'Super Sweepstakes — Get Money': 'People_celebrating_sweepstakes_c_2K_20261007135247-ezgif.com-png-to-webp-converter.webp',
+  'Grocery Gift Card $1,000': 'Shopper_checking_grocery_gift_card_2K_20261007141316-ezgif.com-png-to-webp-converter.webp',
+  'PerkPantry — Grocery $500': 'Shopper_checking_grocery_rewards_2K_20261007142149-ezgif.com-png-to-webp-converter.webp',
+  'Unclaimed Money — Get': 'Unclaimed_money_campaign_graphic_2K_20261007135627-ezgif.com-png-to-webp-converter.webp',
+  'Meta Live Zeus': 'Zeus_character_holding_smartphone_2K_20261007135953-ezgif.com-png-to-webp-converter.webp'
 };
 
 const carouselImages = {
@@ -38,6 +109,8 @@ const offer = (id, title, url, category, amount, theme, region = 'US') => ({
   region,
   terms: 'Offer terms apply',
 });
+
+const smartLinkUrl = 'https://app.trcefy.com/sl?id=6a2050db46d3cf0d62f32aa4&pid=2&sub2=u809907&sub6=s2smartLink&sub5=s1SUBID1HERE';
 
 const allOffers = [
   offer(5, 'Unclaimed Money Search', 'https://exoticlead.com/track.php?offer_id=5&aff_id=4342', 'promotional', 'Explore offer', 'navy'),
@@ -99,6 +172,9 @@ const allOffers = [
   offer(87, 'Burger King Rewards $1,000', 'https://exoticlead.com/track.php?offer_id=87&aff_id=4342', 'food', 'Up to $1,000', 'coral'),
   offer(90, 'KFC Gift Card $1,000', 'https://exoticlead.com/track.php?offer_id=90&aff_id=4342', 'food', 'Up to $1,000', 'coral'),
   offer(91, 'Nike Rewards $1,000', 'https://exoticlead.com/track.php?offer_id=91&aff_id=4342', 'shopping', 'Up to $1,000', 'violet'),
+  offer(13974, 'Sneakers Gift Card', smartLinkUrl, 'shopping', 'Gift card offer', 'violet'),
+  offer(13980, 'Nike Gift Card $100', smartLinkUrl, 'shopping', '$100 value', 'violet'),
+  offer(14331, 'Google Play Gift Card $1,000', smartLinkUrl, 'gift-cards', 'Up to $1,000', 'gold'),
   offer(2, 'Cash App $850', 'https://exoticlead.com/track.php?offer_id=2&aff_id=4342', 'cash', 'Up to $850', 'emerald'),
   offer(30, 'Amazon $1,000 Gift Card', 'https://exoticlead.com/track.php?offer_id=30&aff_id=4342', 'gift-cards', 'Up to $1,000', 'gold'),
   offer(28, 'Cash App $750 Gift Card', 'https://exoticlead.com/track.php?offer_id=28&aff_id=4342', 'cash', 'Up to $750', 'emerald'),
@@ -111,6 +187,15 @@ const allOffers = [
   offer(95, 'Surveys2Cash', 'https://exoticlead.com/track.php?offer_id=95&aff_id=4342', 'surveys', 'US-only survey', 'violet'),
   offer(117, 'Apple Watch 8', 'https://exoticlead.com/track.php?offer_id=117&aff_id=4342', 'promotional', 'Review offer', 'navy'),
   offer(129, 'Coca-Cola Mini Fridge', 'https://exoticlead.com/track.php?offer_id=129&aff_id=4342', 'promotional', 'Review offer', 'coral'),
+  offer(23329, 'Tap Coin Rewards', smartLinkUrl, 'surveys', 'Rewards offer', 'violet'),
+  offer(23337, 'Best Rewards Now', smartLinkUrl, 'promotional', 'Rewards opportunity', 'gold'),
+  offer(23361, 'Samsung Galaxy S26 Ultra Giveaway', smartLinkUrl, 'promotional', 'Prize opportunity', 'navy'),
+  offer(23810, 'Airport Jobs (US)', smartLinkUrl, 'promotional', 'Explore job listings', 'blue'),
+  offer(23921, 'Starbucks Gift Card $250', smartLinkUrl, 'food', '$250 value', 'coral'),
+  offer(24077, 'Digital Gift Card Giveaway $750', smartLinkUrl, 'gift-cards', 'Up to $750', 'gold'),
+  offer(24632, 'Jersey Mike’s Gift Card $100', smartLinkUrl, 'food', '$100 value', 'coral'),
+  offer(24663, 'Free Gift Card $25', smartLinkUrl, 'gift-cards', '$25 value', 'gold'),
+  offer(24773, 'Smartphone Giveaway', smartLinkUrl, 'promotional', 'Prize opportunity', 'navy'),
 ];
 
 const popularIds = [31, 57, 2, 83, 30, 56, 28, 18, 26, 88, 87, 90, 92, 74, 85, 34, 84, 91, 109, 89, 86, 42, 32, 44, 73, 70, 58, 105, 36, 35, 69, 95];
@@ -254,7 +339,9 @@ const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp
 
 const cardVisual = (item) => `
   <div class="offer-visual ${esc(item.theme)}${item.image ? ' has-image' : ''}" role="img" aria-label="${esc(item.title)} visual">
-    ${item.image ? `<img class="offer-visual-image" src="${esc(item.image)}" alt="" loading="lazy" decoding="async">` : `
+    ${item.image ? `
+      <img class="offer-visual-image" src="${esc(item.image)}" alt="" loading="lazy" decoding="async">
+    ` : `
       <div class="visual-glow"></div>
       <div class="visual-ticket">
         <span class="ticket-mark">${esc(categoryMeta[item.category]?.icon || '✦')}</span>
