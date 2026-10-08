@@ -63,6 +63,10 @@ const offerImages = {
   'Jersey Mike’s Gift Card $100': 'ad_24632_6ac45834070c4-ezgif.com-png-to-webp-converter.webp',
   'Free Gift Card $25': 'ad_24663_6ac47901897cb-ezgif.com-png-to-webp-converter.webp',
   'Smartphone Giveaway': 'ad_24773_6ac4e54509a21-ezgif.com-png-to-webp-converter.webp',
+  'Ultra Gift Card $100': 'Ultra Gift Card 100$.webp',
+  'Google Play Gift Card': 'Google play Gift Card Code.webp',
+  'Xbox Gift Card': 'X-Box Gift Card Code.webp',
+  'eBay Gift Card': '$100 eBay Gift Card Code.webp',
   'Walmart $1,000': 'Walmart $1,000.webp',
   'Unemployment Resources': 'Unemployment Resources.webp',
   'Daily Spinz Cash App': 'Adult_using_smartphone_for_rewards_2K_20261007142510-ezgif.com-png-to-webp-converter.webp',
@@ -196,9 +200,13 @@ const allOffers = [
   offer(24632, 'Jersey Mike’s Gift Card $100', smartLinkUrl, 'food', '$100 value', 'coral'),
   offer(24663, 'Free Gift Card $25', smartLinkUrl, 'gift-cards', '$25 value', 'gold'),
   offer(24773, 'Smartphone Giveaway', smartLinkUrl, 'promotional', 'Prize opportunity', 'navy'),
+  offer(24800, 'Ultra Gift Card $100', 'https://app.trcefy.com/sl?id=6a2050db46d3cf0d62f32aa4&pid=2&sub2=u809907&sub6=s2smartLink&sub5=s1SUBID1HERE', 'gift-cards', '$100 value', 'gold'),
+  offer(24801, 'Google Play Gift Card', smartLinkUrl, 'gift-cards', 'Gift card offer', 'gold'),
+  offer(24802, 'Xbox Gift Card', smartLinkUrl, 'gift-cards', 'Gift card offer', 'blue'),
+  offer(24803, 'eBay Gift Card', smartLinkUrl, 'gift-cards', 'Gift card offer', 'gold'),
 ];
 
-const popularIds = [31, 57, 2, 83, 30, 56, 28, 18, 26, 88, 87, 90, 92, 74, 85, 34, 84, 91, 109, 89, 86, 42, 32, 44, 73, 70, 58, 105, 36, 35, 69, 95];
+const popularIds = [31, 57, 2, 83, 30, 56, 28, 18, 26, 88, 87, 90, 92, 74, 85, 34, 84, 91, 109, 89, 86, 42, 32, 44, 73, 70, 58, 105, 36, 35, 69, 95, 24800, 24801, 24802, 24803];
 const popularOffers = popularIds.map((id) => allOffers.find((item) => item.id === id)).filter(Boolean);
 
 const categoryLabels = {
@@ -372,7 +380,7 @@ const offerCard = (item) => {
       <div class="offer-info ${esc(item.theme)}">
         <div class="offer-badge"><span>${esc(meta.icon)}</span>${esc(meta.label)}</div>
         <h3>${esc(item.title)}</h3>
-        <p class="offer-copy">Explore this promotional opportunity and review the advertiser requirements.</p>
+        <p class="offer-copy">Explore this real opportunity and review the advertiser requirements.</p>
         <div class="offer-meta"><span>${esc(regionText)}</span><span>${esc(item.terms)}</span></div>
         <a class="offer-cta" href="${esc(item.url)}" target="_blank" rel="sponsored nofollow noopener" data-offer-click="${item.id}" data-cta-variant="${variant}">${label} <span aria-hidden="true">↗</span></a>
         <div class="offer-microcopy">${esc(microcopy)}</div>
@@ -441,7 +449,7 @@ app.innerHTML = `
       ${adSlot('top-banner', 'Adsterra top banner · 728×90', '3f03bff4ac94425c640bbf122d14569f', 728, 90)}
 
       <section class="section-block popular-section" id="popular" aria-labelledby="popular-title">
-        <div class="section-heading"><div><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> Curated for a quicker browse</div><h2 id="popular-title">Popular offers</h2></div><span class="section-count">32 featured</span></div>
+        <div class="section-heading"><div><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> Curated for a quicker browse</div><h2 id="popular-title">Popular offers</h2></div><span class="section-count">${popularOffers.length} featured</span></div>
         <p class="section-intro">Start with the offers visitors are most likely to recognize. Review each advertiser’s terms before continuing.</p>
         <div class="offer-grid popular-grid" id="popular-grid"></div>
         <div class="browse-bridge"><div><span class="eyebrow muted">More ways to explore</span><h3>Looking for something different?</h3></div><button class="secondary-button" id="browse-all-button">Browse all offers <span>↗</span></button></div>
@@ -486,6 +494,7 @@ app.innerHTML = `
     <div class="intent-backdrop" id="exit-intent" role="dialog" aria-modal="true" aria-labelledby="exit-intent-title" hidden><div class="intent-modal"><button class="intent-close" type="button" aria-label="Close offer reminder">×</button><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> Before you go</div><h2 id="exit-intent-title">Still comparing your options?</h2><p>Browse more USA-focused offers and review each advertiser’s requirements before continuing.</p><a class="intent-cta" href="#offers" data-intent-action="exit_intent">Browse all offers <span>↗</span></a><small>Offer eligibility and terms vary by advertiser.</small></div></div>
     <aside class="scroll-sheet" id="scroll-sheet" aria-labelledby="scroll-sheet-title" hidden><button class="intent-close" type="button" aria-label="Close offer reminder">×</button><div><div class="eyebrow muted"><span class="eyebrow-icon">✦</span> More to explore</div><h2 id="scroll-sheet-title">Looking for more reward options?</h2><p>Open the full directory to compare categories and offers.</p></div><a class="intent-cta" href="#offers" data-intent-action="scroll_depth">Explore all offers <span>↗</span></a></aside>
   </div>`;
+document.documentElement.classList.remove('js-loading');
 
 setupRetention();
 

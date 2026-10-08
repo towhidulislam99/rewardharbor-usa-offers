@@ -27,6 +27,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" /></noscript>
+    <style>html.js-loading #app > main { visibility: hidden; }</style>
+    <script>
+      document.documentElement.classList.add('js-loading');
+      window.setTimeout(() => document.documentElement.classList.remove('js-loading'), 8000);
+    </script>
     <title>USA Gift Card &amp; Reward Offers | RewardHarbor</title>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"WebSite","name":"RewardHarbor","url":"https://rewardharbor-usa-offers.netlify.app/","description":"USA-focused directory for gift card, cash, survey and promotional offers.","inLanguage":"en-US"}
